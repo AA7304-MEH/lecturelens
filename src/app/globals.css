@@ -226,6 +226,123 @@ html {
   }
 }
 
+/* Enhanced slide animations */
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced button hover effects */
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 25px 50px rgba(168, 85, 247, 0.6),
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 
+    0 15px 30px rgba(168, 85, 247, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced glass effects */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 35px 80px rgba(0, 0, 0, 0.5),
+    0 15px 30px rgba(168, 85, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced tooltip */
+.tooltip {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced progress animations */
+@keyframes progress-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.4);
+  }
+}
+
+.progress-fill {
+  animation: progress-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced focus states */
+.enhanced-textarea:focus {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.10));
+  box-shadow: 
+    0 20px 60px rgba(168, 85, 247, 0.4),
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* Color-specific utilities for dynamic classes */
+.bg-purple-500\/10 { background-color: rgba(168, 85, 247, 0.1); }
+.bg-blue-500\/10 { background-color: rgba(59, 130, 246, 0.1); }
+.bg-green-500\/10 { background-color: rgba(34, 197, 94, 0.1); }
+.bg-orange-500\/10 { background-color: rgba(249, 115, 22, 0.1); }
+.bg-pink-500\/10 { background-color: rgba(236, 72, 153, 0.1); }
+.bg-cyan-500\/10 { background-color: rgba(6, 182, 212, 0.1); }
+.bg-emerald-500\/10 { background-color: rgba(16, 185, 129, 0.1); }
+.bg-red-500\/10 { background-color: rgba(239, 68, 68, 0.1); }
+
+.from-purple-500 { --tw-gradient-from: rgb(168, 85, 247); }
+.to-purple-600 { --tw-gradient-to: rgb(147, 51, 234); }
+.from-blue-500 { --tw-gradient-from: rgb(59, 130, 246); }
+.to-blue-600 { --tw-gradient-to: rgb(37, 99, 235); }
+.from-green-500 { --tw-gradient-from: rgb(34, 197, 94); }
+.to-green-600 { --tw-gradient-to: rgb(22, 163, 74); }
+.from-orange-500 { --tw-gradient-from: rgb(249, 115, 22); }
+.to-orange-600 { --tw-gradient-to: rgb(234, 88, 12); }
+.from-pink-500 { --tw-gradient-from: rgb(236, 72, 153); }
+.to-pink-600 { --tw-gradient-to: rgb(219, 39, 119); }
+.from-cyan-500 { --tw-gradient-from: rgb(6, 182, 212); }
+.to-cyan-600 { --tw-gradient-to: rgb(8, 145, 178); }
+.from-emerald-500 { --tw-gradient-from: rgb(16, 185, 129); }
+.to-emerald-600 { --tw-gradient-to: rgb(5, 150, 105); }
+.from-red-500 { --tw-gradient-from: rgb(239, 68, 68); }
+.to-red-600 { --tw-gradient-to: rgb(220, 38, 38); }
+
+.text-purple-400 { color: rgb(196, 181, 253); }
+.text-blue-400 { color: rgb(96, 165, 250); }
+.text-green-400 { color: rgb(74, 222, 128); }
+.text-pink-400 { color: rgb(244, 114, 182); }
+.text-cyan-400 { color: rgb(34, 211, 238); }
+.text-emerald-400 { color: rgb(52, 211, 153); }
+.text-red-400 { color: rgb(248, 113, 113); }
 /* Enhanced button effects */
 .btn-primary {
   @apply relative bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white font-bold py-4 px-8 rounded-xl;
